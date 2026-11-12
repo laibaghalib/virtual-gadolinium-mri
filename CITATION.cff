@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper below."
+title: "Virtual Gadolinium: Deep Learning-Based Virtual Contrast MRI Synthesis and Brain Tumor Segmentation"
+type: article
+authors:
+  - family-names: Abbas
+    given-names: Samar
+  - family-names: Ali
+    given-names: Muazzam
+  - family-names: Ghalib
+    given-names: Laiba
+  - family-names: Aqeel
+    given-names: Talha
+  - family-names: Ali
+    given-names: Reeba Waris
+  - family-names: Ali
+    given-names: Awais
+  - family-names: Nazir
+    given-names: Zaeem
+doi: 10.5281/zenodo.20321580
+journal: "Spectrum of Engineering Sciences"
+volume: 4
+issue: 5
+year: 2026
+date-released: 2026-05-21
