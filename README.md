@@ -13,7 +13,7 @@ Deep learning-based virtual contrast MRI synthesis (T1 pre → T1 post) using a 
 
 ## Summary
 
-A residual U-Net that synthesizes gadolinium-enhanced T1-weighted MRI from unenhanced T1 images. It is trained on the UCSF-PDGM dataset (paired T1pre and T1post axial slices) with a combined SSIM + L1 loss, and the pipeline also includes post-processing and segmentation-guided visualization.
+A residual U-Net that synthesizes gadolinium-enhanced T1-weighted MRI from unenhanced T1 images. The pipeline also includes post-processing and segmentation-guided visualization.
 
 **Test set results:**
 
@@ -22,15 +22,34 @@ A residual U-Net that synthesizes gadolinium-enhanced T1-weighted MRI from unenh
 | PSNR | 32.70 dB |
 | SSIM | 0.9540 |
 
+## Dataset
+
+UCSF-PDGM (v3), downloaded from Kaggle: 100+ patients with paired T1-weighted pre-contrast (T1pre) and post-contrast (T1post) brain MRI volumes. The 3D NIfTI volumes were converted to 2D axial slices (128×128) for training.
+
+## Method
+
+- Residual U-Net with 4 encoder and 4 decoder stages, about 5.14M parameters
+- Loss: combined SSIM + L1 (α = 0.8)
+- Metrics: PSNR, SSIM, MSE, MAE
+
 ## Pipeline
 
 ![Pipeline](pipeline.png)
+
+*Figure from the paper.*
 
 Data preprocessing (3D NIfTI to 2D slices) → residual U-Net training → inference → post-processing (upsampling, sharpening) → segmentation-guided visualization.
 
 ## Architecture
 
 ![Residual U-Net](unet.png)
+
+*Figure from the paper.*
+
+## Limitations
+
+- The model was trained on low-resolution (128×128) images.
+- Further validation on larger datasets and prospective clinical studies is still needed, as stated in the paper.
 
 ## License
 
