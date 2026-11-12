@@ -32,6 +32,10 @@ Data preprocessing (3D NIfTI to 2D slices) → residual U-Net training → infer
 
 ![Residual U-Net](unet.png)
 
+## License
+
+The paper is published under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. Please cite the paper if you use or share it.
+
 ## Cite
 
 Abbas, S., Ali, M., Ghalib, L., Aqeel, T., Ali, R. W., Ali, A., & Nazir, Z. (2026). Virtual Gadolinium: Deep Learning-Based Virtual Contrast MRI Synthesis and Brain Tumor Segmentation. *Spectrum of Engineering Sciences*, 4(5), 1831–1857. https://doi.org/10.5281/zenodo.20321580
